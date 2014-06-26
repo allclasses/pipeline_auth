@@ -61,7 +61,7 @@ class PipelineAuthenticator(object):
 
         # Store auth token for later
         succ("Successfully logged into Github.  Stored auth token in\n"
-             "%s\n for later use." % self.gh_token)
+             "%s for later use." % self.gh_token)
         with open(self.gh_token, 'w') as f:
             f.write("%s\n%s" % (auth.token, auth.id))
         return auth.token
