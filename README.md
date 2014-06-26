@@ -51,7 +51,7 @@ def auth_token():
         gh = github3.login(token=gh_token)
         assert gh is not None, "Token login unsuccessful"
 
-        # Validate the github identity however you please, using
+        # Validate the github identity however you please
         user = gh.user().login
 
     except AssertionError as e:
