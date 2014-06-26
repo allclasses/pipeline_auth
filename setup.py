@@ -8,8 +8,8 @@ setup(
         'pipeline_auth',
     ],
     install_requires=[
-        'requests==2.7',
-        'github.py==0.9.0',
+        'requests==2.3.0',
+        'github3.py==0.9.0',
     ],
     description="Two step client authentication class for OAuth login with "
                 "the GitHub API against an application API"
