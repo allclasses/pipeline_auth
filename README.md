@@ -44,11 +44,11 @@ signer = Signer('secret-key')
 @app.route('/api/auth', methods=["POST"])
 def auth_token():
     try:
-        gh_token = request.args.get("authorization")
-        assert gh_token, "Authorization heading required"
+        gh_token = request.headers.get("authorization")
+        assert gh_token, "Authorization header required"
 
         # Login to Github with token
-        gh = github3.login(token=data["github_token"])
+        gh = github3.login(token=gh_token)
         assert gh is not None, "Token login unsuccessful"
 
         # Validate the github identity however you please, using
