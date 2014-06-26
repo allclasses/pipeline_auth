@@ -5,7 +5,7 @@ setup(
     version="0.0.1",
     author="Greg Thole",
     packages=[
-        'pipeline_backends',
+        'pipeline_auth',
     ],
     install_requires=[
         'requests==2.7',
