@@ -9,7 +9,7 @@ Makes use of the excellent libraries:
 
 Installation:
 ```bash
-$ virtualenv/bin/pip install git+ssh://git@github.com/allclasses/pipeline_auth.git@master#egg=pipeline_auth
+$ virtualenv/bin/pip install "git+ssh://git@github.com/allclasses/pipeline_auth.git@master#egg=pipeline_auth"
 ```
 
 ### Example Use
