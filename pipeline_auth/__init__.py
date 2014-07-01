@@ -51,7 +51,7 @@ class PipelineAuthenticator(object):
         auth = github3.authorize(
             username,
             password,
-            self.scopes,
+            self.gh_scopes,
             self.note,
             self.host
         )
