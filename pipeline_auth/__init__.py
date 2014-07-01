@@ -75,7 +75,7 @@ class PipelineAuthenticator(object):
         if os.path.isfile(self.app_token):
             os.remove(self.app_token)
         warn("Make sure to delete the pipeline token in Github at:\n"
-             "https://github.com/settings/emails")
+             "https://github.com/settings/applications")
         succ("Tokens removed")
 
     def get_token(self):
