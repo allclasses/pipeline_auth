@@ -66,16 +66,22 @@ class PipelineAuthenticator(object):
             f.write("%s\n%s" % (auth.token, auth.id))
         return auth.token
 
+    def reset_gh_token(self):
+        if os.path.isfile(self.gh_token):
+            os.remove(self.gh_token)
+        warn("Make sure to delete the pipeline token in Github at:\n"
+             "https://github.com/settings/applications")
+
+    def reset_app_token(self):
+        if os.path.isfile(self.app_token):
+            os.remove(self.app_token)
+
     def reset_tokens(self):
         """
         Deletes stored tokens
         """
-        if os.path.isfile(self.gh_token):
-            os.remove(self.gh_token)
-        if os.path.isfile(self.app_token):
-            os.remove(self.app_token)
-        warn("Make sure to delete the pipeline token in Github at:\n"
-             "https://github.com/settings/applications")
+        self.reset_gh_token()
+        self.reset_app_token()
         succ("Tokens removed")
 
     def get_token(self):
